@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +18,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
             driver.findElement(By.xpath("//textarea[@ng-model='Adress']")).sendKeys("AV Paulista, 509");
             driver.findElement(By.xpath("//input[@type='email']")).sendKeys("teste@teste.com.br");
             driver.findElement(By.xpath(" //input[@type='tel']")).sendKeys("119773512");
+        }
+        @After
+
+        public void after() throws InterruptedException {
+              Thread.sleep(5000);
+              driver.quit();
         }
 
 }
